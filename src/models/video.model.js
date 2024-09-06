@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 
 
@@ -32,7 +32,7 @@ const videoSchema = new mongoose.Schema(
             type: Boolean,
             default: true,
         },
-        owener: {
+        owner: {
             type: Schema.Types.ObjectId,
             ref: "User",
         },
@@ -42,6 +42,8 @@ const videoSchema = new mongoose.Schema(
     }
 );
 
+// Create a text index on `title` and `description` fields
+videoSchema.index({ title: 'text', description: 'text' });
 videoSchema.plugin(mongooseAggregatePaginate)
 
 export const Video = mongoose.model("Video", videoSchema);

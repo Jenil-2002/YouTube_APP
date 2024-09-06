@@ -15,11 +15,11 @@ YouTube_APP is a video streaming app inspired by YouTube, designed to [brief des
 
 ## Installation
 To run YouTube_APP locally, follow these steps:
-1. Clone the repository: `git clone https://github.com/yourusername/YouTube_APP.git`
+1. Clone the repository: `git clone https://github.com/Jenil-2002/YouTube_APP.git`
 2. Navigate into the project directory: `cd YouTube_APP`
 3. Install dependencies: `npm install` or `yarn install`
 4. Start the app: `npm start` or `yarn start`
-5. Open your browser and navigate to `http://localhost:3000`
+5. Open your browser and navigate to `http://localhost:8000`
 
 ## Usage
 1. **Sign Up / Sign In**: Create an account or log in with existing credentials.
@@ -29,6 +29,6 @@ To run YouTube_APP locally, follow these steps:
 5. **Subscribe to Channels**: Follow channels to receive updates on new uploads.
 
 ## Technologies Used
-- Frontend: [Framework/Libraries used for the frontend, e.g., React, Angular]
-- Backend: [Framework/Libraries used for the backend, e.g., Node.js, Django]
+- Frontend: [Framework/Libraries used for the frontend, e.g., React]
+- Backend: [Framework/Libraries used for the backend, e.g., Node.js]
 - Database: [Database technology used, e.g., MySQL, MongoDB]
