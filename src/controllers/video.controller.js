@@ -91,7 +91,8 @@ const getVideoById = asyncHandler(async (req, res) => {
         new ApiResponse(200, video)
       )
   } catch (error) {
-    throw new ApiError(500, "Error retrieving video");
+    // throw new ApiError(500, "Error retrieving video");
+    res.status(500).json({ message: "Error retrieving video", error: error.message });
   }
 });
 
@@ -131,7 +132,6 @@ const updateVideo = asyncHandler(async (req, res) => {
 
 const deleteVideo = asyncHandler(async (req, res) => {
   const { videoId } = req.params;
-  //TODO: delete video
   try {
     // Find the video by ID
     const video = await Video.findById(videoId);
