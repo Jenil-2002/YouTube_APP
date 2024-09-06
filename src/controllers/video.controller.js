@@ -154,7 +154,6 @@ const deleteVideo = asyncHandler(async (req, res) => {
 const togglePublishStatus = asyncHandler(async (req, res) => {
   const { videoId } = req.params;
   try {
-    // Find the video by ID
     const video = await Video.findById(videoId);
     if (!video) {
       return res.status(404).json({ message: "Video not found" });
@@ -163,7 +162,6 @@ const togglePublishStatus = asyncHandler(async (req, res) => {
     // Toggle the isPublished status
     video.isPublished = !video.isPublished;
 
-    // Save the updated video
     await video.save();
     return res
       .status(200)
