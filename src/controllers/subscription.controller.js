@@ -41,7 +41,7 @@ const toggleSubscription = asyncHandler(async (req, res) => {
 const getUserChannelSubscribers = asyncHandler(async (req, res) => {
   const { channelId } = req.params;
   try {
-    const subscribers = await Subscription.findOne({
+    const subscribers = await Subscription.find({
       channel: channelId,
     });
 
@@ -61,7 +61,7 @@ const getUserChannelSubscribers = asyncHandler(async (req, res) => {
 const getSubscribedChannels = asyncHandler(async (req, res) => {
   const { subscriberId } = req.params;
   try {
-    const subscribedChannels = await Subscription.findOne({
+    const subscribedChannels = await Subscription.find({
         subScriber: subscriberId,
     });
 
