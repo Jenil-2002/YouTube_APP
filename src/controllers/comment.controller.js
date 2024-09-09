@@ -70,15 +70,12 @@ const updateComment = asyncHandler(async (req, res) => {
     const { commentId } = req.params;
     const { content } = req.body;
 
-
-    // Find the comment by its ID
     const comment = await Comment.findById(commentId);
 
     if (!comment) {
         return res.status(404).json({ message: "Comment not found." });
     }
 
-    // Update the content
     comment.content = content;
     const updatedComment = await comment.save();
 
